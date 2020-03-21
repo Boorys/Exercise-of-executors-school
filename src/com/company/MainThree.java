@@ -1,11 +1,13 @@
 package com.company;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+
 import java.util.List;
 import java.util.concurrent.*;
 
+
 public class MainThree {
+
 
     public static void main(String[] args) throws InterruptedException, ExecutionException {
 
@@ -13,7 +15,7 @@ public class MainThree {
         ExecutorService pool = Executors.newFixedThreadPool(5);
 
         //generateFiles
-        Main.generateFiles(srcFiles);
+      //  Main.generateFiles(srcFiles);
 
         List<Callable<Double>> taskList = new ArrayList<>();
 
@@ -29,6 +31,19 @@ public class MainThree {
                 e.printStackTrace();
             }
         });
+
+        double sum = futures.stream().mapToDouble(o -> {
+            try {
+                return o.get();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            }
+            return 0;
+        }).sum();
+        System.out.println("Suma:"+sum);
+
     }
 
 }

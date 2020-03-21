@@ -35,14 +35,11 @@ public class MyTaskCopy implements Runnable {
         } finally {
             try {
                 is.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            try {
                 os.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
         }
     }
 }

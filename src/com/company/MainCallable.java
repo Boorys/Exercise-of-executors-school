@@ -21,7 +21,8 @@ public class MainCallable {
 
 
         //generateFiles
-        Main.generateFiles(srcFiles);
+       // Main.generateFiles(srcFiles);
+
 
         while (srcFilesIterator.hasNext()) {
             MyTaskMax myTaskMax = new MyTaskMax(srcFilesIterator.next());

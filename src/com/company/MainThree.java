@@ -12,6 +12,9 @@ public class MainThree {
         List<String> srcFiles = List.of("plikA.txt", "plikB.txt", "plikC.txt", "plikD.txt", "plikE.txt", "plikF.txt", "plikG.txt");
         ExecutorService pool = Executors.newFixedThreadPool(5);
 
+        //generateFiles
+        Main.generateFiles(srcFiles);
+
         List<Callable<Double>> taskList = new ArrayList<>();
 
         srcFiles.forEach(k -> taskList.add(new MyTaskMax(k)));

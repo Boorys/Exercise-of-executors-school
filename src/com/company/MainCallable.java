@@ -19,6 +19,10 @@ public class MainCallable {
         Iterator<String> srcFilesIterator = srcFiles.iterator();
         List<Future<Double>> futureList = new ArrayList<>();
 
+
+        //generateFiles
+        Main.generateFiles(srcFiles);
+
         while (srcFilesIterator.hasNext()) {
             MyTaskMax myTaskMax = new MyTaskMax(srcFilesIterator.next());
             futureList.add(pool.submit(myTaskMax));

@@ -34,7 +34,7 @@ public class Main {
         long timeStop;
 
         //generateFiles
-        // generateFiles(srcFiles);
+         generateFiles(srcFiles);
 
         ExecutorService pool = Executors.newFixedThreadPool(NUMBER_THREADS);
         Iterator<String> srcFilesIterator = srcFiles.iterator();
@@ -48,10 +48,10 @@ public class Main {
             MyTaskCopy myTaskCopy = new MyTaskCopy(srcFilesIterator.next(), dstFilesIterator.next(), pool);
             Future<?> result = pool.submit(myTaskCopy);
         }
-
+        pool.shutdown();
         //time stop
         timeStop = System.currentTimeMillis();
-        pool.shutdown();
+
 
         System.out.println("Time: "+(timeStop - timeStart));
     }

@@ -2,10 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7df70e1a-aa9f-4f1f-a9df-c90ca9f38f9c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/plikA.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plikADst.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plikB.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plikBDst.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plikC.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plikCDst.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plikD.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plikDDst.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plikE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plikEDst.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plikF.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plikFDst.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plikG.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plikGDst.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/MainCallable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/MainCallable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/MainThree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/MainThree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/MyTaskMax.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/MyTaskMax.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PRIR3/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PRIR3/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +62,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MainCallable">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="PRIR3" />
@@ -93,9 +106,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.MainCallable" />
         <item itemvalue="Application.MainThree" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -110,7 +123,8 @@
       <option name="presentableId" value="Default" />
       <updated>1584803392708</updated>
       <workItem from="1584803396042" duration="11782000" />
-      <workItem from="1584819793872" duration="1339000" />
+      <workItem from="1584819793872" duration="2120000" />
+      <workItem from="1584883509627" duration="2902000" />
     </task>
     <servers />
   </component>

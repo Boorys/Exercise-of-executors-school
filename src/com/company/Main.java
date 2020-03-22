@@ -4,6 +4,7 @@ import javafx.concurrent.Task;
 
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
@@ -29,12 +30,12 @@ public class Main {
 
         List<String> srcFiles = List.of("plikA.txt", "plikB.txt", "plikC.txt", "plikD.txt", "plikE.txt", "plikF.txt", "plikG.txt");
         List<String> dstFiles = List.of("plikADst.txt", "plikBDst.txt", "plikCDst.txt", "plikDDst.txt", "plikEDst.txt", "plikFDst.txt", "plikGDst.txt");
-        final int NUMBER_THREADS = 5;
+        final int NUMBER_THREADS = 30;
         long timeStart;
         long timeStop;
 
         //generateFiles
-         generateFiles(srcFiles);
+        //generateFiles(srcFiles);
 
         ExecutorService pool = Executors.newFixedThreadPool(NUMBER_THREADS);
         Iterator<String> srcFilesIterator = srcFiles.iterator();
@@ -43,16 +44,30 @@ public class Main {
         //time start
         timeStart = System.currentTimeMillis();
 
+
+        List<Future<?>> results = new ArrayList<>();
         while (srcFilesIterator.hasNext() && dstFilesIterator.hasNext()) {
 
+
             MyTaskCopy myTaskCopy = new MyTaskCopy(srcFilesIterator.next(), dstFilesIterator.next(), pool);
-            Future<?> result = pool.submit(myTaskCopy);
+            results.add(pool.submit(myTaskCopy));
         }
+
+        results.forEach((x)-> {
+            try {
+                x.get();
+            } catch (InterruptedException | ExecutionException e) {
+                e.printStackTrace();
+            }
+        });
+
+
         pool.shutdown();
         //time stop
+
         timeStop = System.currentTimeMillis();
 
 
-        System.out.println("Time: "+(timeStop - timeStart));
+        System.out.println(timeStop - timeStart);
     }
 }
